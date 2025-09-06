@@ -99,10 +99,11 @@ a:hover {
 }
 
 #what-is-this {
-	line-height: 60%;
+	width: 780px;
 }
 
 #previous-incarnation {
+	line-height: 60%;
 	font-size: var(--size-smol);
 	color: var(--col-mute);
 }
