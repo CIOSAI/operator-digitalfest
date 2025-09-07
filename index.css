@@ -2,7 +2,7 @@
 	--col-bg: #bcb;
 	--col-main: #444;
 	--col-hl: #940;
-	--col-mute: #aaa;
+	--col-mute: #999;
 	--size-smol: 0.2in;
 	--size-mid: 0.3in;
 	--size-big: 0.5in;
@@ -23,6 +23,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
+	font-size: var(--size-mid);
 }
 
 html {
@@ -81,6 +82,10 @@ a:hover {
 	height: 100%;
 }
 
+#head .currentPage::before {
+	content: ">";
+}
+
 #content {
 	display: flex;
 	margin-top: 25vh;
@@ -116,4 +121,9 @@ a:hover {
 	#head {
 		background: transparent;
 	}
+}
+
+.WIP {
+	text-decoration: line-through !important;
+	color: var(--col-mute) !important;
 }
