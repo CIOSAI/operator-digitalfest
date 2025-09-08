@@ -1,32 +1,63 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>運算子數位藝術節</title>
-	<meta og:description="聚集數位技術×創意媒體交會點上的人，一起來聊技術美術、DJ/VJ、數位文化！臺灣唯一的 demoparty"></>
-	<link rel="stylesheet" href="../index.css"/>
-	<script defer src="../index.js"></script>
-</head>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
 
-<body>
-	<div id="head">
-		<a href="../index.html" id="logo">
-			<svg width="150" height="150" viewBox="0 0 39.687499 39.6875" ><path
+<svg
+   width="150"
+   height="150"
+   viewBox="0 0 39.687499 39.6875"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (2aeb623e1d, 2025-05-12)"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.138793"
+     inkscape:cx="-16.24527"
+     inkscape:cy="193.62606"
+     inkscape:window-width="1920"
+     inkscape:window-height="945"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="false">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="9.9999999"
+       spacingy="9.9999999"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       fill="currentColor"
        id="path5"
-       style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;fill:currentColor;stroke-linecap:square;enable-background:accumulate;stop-color:#000000;stop-opacity:1;opacity:1"
+       style="baseline-shift:baseline;display:inline;overflow:visible;vector-effect:none;stroke-linecap:square;enable-background:accumulate;stop-opacity:1;opacity:1"
        d="M 9.6035482 2.5197428 L 9.5704753 2.5212931 C 9.5704753 2.5212931 7.537942 2.5486794 5.5800212 3.8493774 C 3.6221004 5.1500789 1.7657837 7.8782721 1.7657837 12.191504 C 1.7657837 15.907293 3.1637723 18.371574 4.806425 19.816361 C 3.1641956 21.261291 1.7657837 23.724609 1.7657837 27.439669 C 1.7657837 31.773489 3.7101314 34.52116 5.7205811 35.822103 C 7.7310308 37.123045 9.794751 37.166207 9.794751 37.166207 L 9.8459106 37.168274 L 17.708997 36.958984 L 17.439246 14.211019 L 17.418058 12.265918 L 13.525273 12.31036 L 13.549044 14.258044 L 13.591935 17.869194 L 9.6035482 17.869194 C 9.6035482 17.869194 8.6906843 17.859931 7.7147746 17.228406 C 6.738865 16.596904 5.6580526 15.502219 5.6580526 12.191504 C 5.6580526 8.8807905 6.7468607 7.7481297 7.7344116 7.0920736 C 8.719843 6.4373805 9.6290903 6.4141796 9.6330037 6.4140788 L 15.679663 6.5138143 L 17.624764 6.5468872 L 17.68936 2.6541016 L 15.744259 2.6230957 L 9.6035482 2.5197428 z M 28.408085 2.5197428 L 28.380697 2.5212931 C 28.380697 2.5212931 26.350747 2.5486794 24.392826 3.8493774 C 22.434905 5.1500757 20.576005 7.8782721 20.576005 12.191504 C 20.576005 15.907762 21.976304 18.371666 23.61923 19.816361 C 21.976727 21.261199 20.576005 23.724139 20.576005 27.439669 C 20.576005 31.773489 22.522936 34.52116 24.533386 35.822103 C 26.543836 37.123045 28.605489 37.166207 28.605489 37.166207 L 28.656132 37.167757 L 36.519735 36.958984 L 36.252051 14.211019 L 36.22828 12.265918 L 32.336011 12.31036 L 32.359265 14.258044 L 32.402157 17.869194 L 28.414286 17.869194 C 28.414286 17.869194 27.501422 17.859931 26.525513 17.228406 C 25.549603 16.596904 24.468791 15.502219 24.468791 12.191504 C 24.468791 8.8807905 25.557599 7.7481297 26.54515 7.0920736 C 27.531802 6.4366147 28.443629 6.4120538 28.445292 6.4120117 L 34.210832 6.4724731 L 36.158 6.4941772 L 36.197274 2.6013916 L 34.252173 2.5802043 L 28.408085 2.5197428 z M 9.6035482 21.761462 L 13.636894 21.761462 L 13.771252 33.170068 L 9.886735 33.273421 C 9.8794009 33.273147 8.8878134 33.235417 7.8356974 32.554602 C 6.7796989 31.871276 5.6580526 30.729796 5.6580526 27.439669 C 5.6580526 24.128956 6.7388649 23.033751 7.7147746 22.40225 C 8.6906844 21.770748 9.6035482 21.761462 9.6035482 21.761462 z M 28.414286 21.761462 L 32.447115 21.761462 L 32.581991 33.170068 L 28.697473 33.273421 C 28.690173 33.273147 27.698553 33.235412 26.646436 32.554602 C 25.590438 31.871276 24.468791 30.729796 24.468791 27.439669 C 24.468791 24.128956 25.549603 23.033752 26.525513 22.40225 C 27.501422 21.770748 28.414286 21.761462 28.414286 21.761462 z " />
-		</svg></a>
-		<div style="width: 1em;"></div>
-		<a href="../index.html">主畫面</a>
-		<a href="../timetable/index.html">活動流程</a>
-		<a href="../compo-rules/index.html">徵稿類別及規範</a>
-		<a class="currentPage">關於</a>
-		<a href="../contact/index.html">聯絡我們</a>
-	</div>
-
-	<div>
-		<p><i>運算子數位藝術節</i>和其前身<i>短毛新媒體小聚</i>的任務是把 <a class="WIP" target="_blank">demoscene</a> 文化帶來臺灣，以數位文化爲主，希望打造一個不問資歷、經驗、市場需求，單純創作、分享、互相學習的社群。Demoscene 起源於盜版團隊在他們破解的軟體裡塞自己酷酷的 logo，有的團隊開始加動畫、加主題曲、甚至挑釁或致敬別的團隊，隨著這些 "intro" 越來越複雜，他們乾脆也不盜版了，而是創作 "demo"(demonstration 技術展示) - 可以在個人電腦上執行的檔案，用程式作出影音效果 - 來互相較勁。現代的 demoscene 常出現 DJ/VJ、技術美術、3D 渲染、livecoding 等的交流，而它的起源在像素畫、tracker 音樂、oldskool demo 等創作中延續。</p>
-		<p>短毛社群是主辦<a href="https://ciosai.github.io" target="_blank">石獅</a>爲了以上目的建立的 Discord 群組，主要用來通知活動資訊，也歡迎來聊聊你的創作。</p>
-		<a class="WIP">網站原始碼 (github)</a>
-	</div>
-</body>
-</html>
+  </g>
+</svg>

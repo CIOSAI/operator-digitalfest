@@ -78,8 +78,9 @@ a:hover {
 	background: var(--col-bg);
 }
 
-#logo {
+#logo, #logo svg, #logo img {
 	height: 100%;
+	width: min-content;
 }
 
 #head .currentPage::before {
