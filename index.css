@@ -2,7 +2,8 @@
 	--col-bg: #bcb;
 	--col-main: #444;
 	--col-hl: #940;
-	--col-mute: #999;
+	--col-mute: #777;
+	--opacity-lightmode-textbackground: 80%;
 	--size-smol: 0.2in;
 	--size-mid: 0.3in;
 	--size-big: 0.5in;
@@ -75,7 +76,7 @@ a:hover {
 	display: flex;
 	gap: var(--size-mid);
 	font-size: var(--size-mid);
-	background: var(--col-bg);
+	background: color-mix(in srgb, var(--col-bg) var(--opacity-lightmode-textbackground), transparent);
 }
 
 #logo, #logo svg, #logo img {
@@ -97,7 +98,7 @@ a:hover {
 
 #content div {
 	padding: var(--pad-1);
-	background: var(--col-bg);
+	background: color-mix(in srgb, var(--col-bg) var(--opacity-lightmode-textbackground), transparent);
 }
 
 #important-links {
