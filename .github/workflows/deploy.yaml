@@ -15,4 +15,4 @@ jobs:
           git lfs pull --include=asset
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: website
+          path: asset/
