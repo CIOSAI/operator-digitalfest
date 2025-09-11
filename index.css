@@ -1,7 +1,7 @@
 :root {
 	--col-bg: #bcb;
 	--col-main: #444;
-	--col-hl: #940;
+	--col-hl: #b40;
 	--col-mute: #777;
 	--opacity-lightmode-textbackground: 80%;
 	--size-smol: 0.2in;
@@ -14,7 +14,6 @@
 	:root {
 		--col-bg: #122;
 		--col-main: #eef;
-		--col-hl: #f90;
 		--col-mute: #aab;
 	}
 }
