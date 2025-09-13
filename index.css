@@ -126,6 +126,13 @@ a:hover {
 	bottom: var(--pad-1);
 }
 
+#change-language {
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	background: var(--col-bg);
+}
+
 @media (prefers-color-scheme: dark) {
 	#background-video {
 		filter: brightness(0.45);
