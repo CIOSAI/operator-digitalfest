@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>運算子數位藝術節</title>
-	<meta og:description="2026/2/20 來空總湊熱鬧"></>
-	<link rel="stylesheet" href="index.css"/>
+	<title>Operator Digitalfest</title>
+	<meta og:description="The first Taiwanese demoparty, gathering of graphics programmer, digital artists and newmedia artists"></>
+	<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/CIOSAI/operator-digitalfest/refs/heads/main/asset/icon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/CIOSAI/operator-digitalfest/refs/hgraphieads/main/asset/icon/favicon.svg" />
+	<link rel="shortcut icon" href="https://raw.githubusercontent.com/CIOSAI/operator-digitalfest/refs/heads/main/asset/icon/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/CIOSAI/operator-digitalfest/refs/heads/main/asset/icon/apple-touch-icon.png" />
+	<link rel="manifest" href="https://raw.githubusercontent.com/CIOSAI/operator-digitalfest/refs/heads/main/asset/icon/site.webmanifest" />
+	<style>
+	/* prevent darkmode FOUC by at least having black as background always */
+	@media (prefers-color-scheme: dark) {
+		html {
+			background-color: black;
+			color: white;
+		}
+	}
+	</style>
+	<link rel="stylesheet" href="../index.css"/>
+	<script defer src="../index.js"></script>
 </head>
 
 <body>
+	<div id="video-box"><video id="background-video" autoplay loop alt="promotion video, showing visuals and code, people watch it and chat in a dark room"><source src="https://media.githubusercontent.com/media/CIOSAI/operator-digitalfest/main/asset/background-video.mp4">影片載入失敗 video could not be loaded</video></div>
+
 	<div id="head">
-		<h1>運算子數位藝術節</h1>
+		<a id="logo"><img src="../asset/icon/logo.svg"></a>
+		<div style="width: 1em;"></div>
+		<a class="currentPage">Home</a>
+		<a href="../timetable/en">Timetable</a>
+		<a href="../compo-rules/en">Categories & Rules</a>
+		<a href="../about/en">About</a>
+		<a href="../contact/en">Contact us</a>
 	</div>
 
 	<div id="content">
-		<canvas id="center-canvas"/>
-		<p>運算子聚集臺灣和世界各地的數位藝術家</p>
+		<div id="when-where">2026/JAN/17 : somewhere in Taipei</div>
+		<div id="important-links"><a class="WIP">Register</a><a class="WIP">Submit your work</a><a href="https://ap14.ragic.com/ciosai/mailinglist/5?webview&webaction=form&ver=new&version=2" target="_blank">Join mailing list</a></div>
+		<div id="what-is-this">
+			<p id="previous-incarnation">Previously <a href="https://ciosai.github.io/shorthair" target="_blank">"Shorthair New Media Meetup"</a></p>
+			<p>Are you a digital artist? Interested in DJ/VJ, Demoscene, 3D rendering, retro gaming, pixel art, ascii art, electronic music, or any other artwork related to digital culture? Show off your art at Operator Digitalfest! Let's make art for the sake of art!</p>
+		</div>
+		<div id="join-discord">
+			Join our Discord to keep up to date → <a id="discord-invite" target="_blank">discord.gg/邀請連結</a>
+		</div>
+	</div>
+
+	<div id="subject-to-change">
+		<i>*Details subject to change, join Discord or mailing list to get the latest update</i>
 	</div>
 </body>
 </html>
