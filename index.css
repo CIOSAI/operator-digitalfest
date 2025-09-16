@@ -26,6 +26,12 @@ html, body {
 	font-size: var(--size-mid);
 }
 
+@media screen and (max-width: 800px) {
+	html, body {
+		font-size: var(--size-smol);
+	}
+}
+
 html {
 	background-color: var(--col-bg);
 }
@@ -64,18 +70,11 @@ a:hover {
 	pointer-events: none;
 }
 
-@media (min-width: 800px) {
-	#background-video {
-	}
-}
-
-
 #head {
 	height: var(--size-big);
 	padding: var(--size-mid);
 	display: flex;
-	gap: var(--size-mid);
-	font-size: var(--size-mid);
+	column-gap: var(--size-mid);
 	background: color-mix(in srgb, var(--col-bg) var(--opacity-lightmode-textbackground), transparent);
 }
 
@@ -88,12 +87,19 @@ a:hover {
 	content: ">";
 }
 
+@media screen and (max-width: 1000px) {
+	#head {
+		background: red;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
 #content {
 	display: flex;
-	margin-top: 20vh;
+	margin-top: 15vh;
 	flex-direction: column;
 	align-items: center;
-	font-size: var(--size-mid);
 }
 
 #content div {
@@ -111,7 +117,7 @@ a:hover {
 }
 
 #what-is-this {
-	width: 780px;
+	max-width: 780px; 
 }
 
 #previous-incarnation {
