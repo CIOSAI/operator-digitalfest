@@ -98,6 +98,7 @@ a:hover {
 #content {
 	display: flex;
 	margin-top: 15vh;
+	padding-bottom: 5em;
 	flex-direction: column;
 	align-items: center;
 }
@@ -105,6 +106,19 @@ a:hover {
 #content div {
 	padding: var(--pad-1);
 	background: color-mix(in srgb, var(--col-bg) var(--opacity-lightmode-textbackground), transparent);
+}
+
+#about-content {
+	display: flex;
+	margin-top: 15vh;
+	padding-bottom: 5em;
+	flex-direction: column;
+	align-items: center;
+}
+
+#about-content p {
+	padding: 1em;
+	max-width: 1200px
 }
 
 #important-links {
@@ -127,7 +141,10 @@ a:hover {
 }
 
 #subject-to-change {
-	position: absolute;
+	position: sticky;
+	background: var(--col-bg);
+	border: 2px solid var(--col-main);
+	padding: var(--pad-1);
 	right: var(--pad-1);
 	bottom: var(--pad-1);
 }
