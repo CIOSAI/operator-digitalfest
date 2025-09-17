@@ -121,6 +121,10 @@ a:hover {
 	max-width: 1200px
 }
 
+.compo-rules {
+	max-width: 1200px;
+}
+
 #important-links {
 	display: flex;
 	gap: var(--pad-1);
