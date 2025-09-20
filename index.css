@@ -54,7 +54,7 @@ a:hover {
 }
 
 #video-box, #background-video {
-	position: absolute;
+	position: fixed;
 	width: 100%;
 }
 
