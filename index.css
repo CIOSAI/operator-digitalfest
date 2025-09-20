@@ -138,8 +138,8 @@ a:hover {
 	max-width: 780px; 
 }
 
-#previous-incarnation {
-	line-height: 60%;
+.mute {
+	line-height: 80%;
 	font-size: var(--size-smol);
 	color: var(--col-mute);
 }
