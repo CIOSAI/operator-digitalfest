@@ -45,12 +45,12 @@ body {
 
 a {
 	color: var(--col-hl);
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 a:hover {
-	font-style: italic;
 	cursor: pointer;
+	text-decoration: underline;
 }
 
 #video-box, #background-video {
