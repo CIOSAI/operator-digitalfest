@@ -53,6 +53,12 @@ a:hover {
 	text-decoration: underline;
 }
 
+.mute {
+	line-height: 80%;
+	font-size: var(--size-smol);
+	color: var(--col-mute);
+}
+
 #video-box, #background-video {
 	position: fixed;
 	width: 100%;
@@ -138,12 +144,6 @@ a:hover {
 	max-width: 780px; 
 }
 
-.mute {
-	line-height: 80%;
-	font-size: var(--size-smol);
-	color: var(--col-mute);
-}
-
 #subject-to-change {
 	position: sticky;
 	background: var(--col-bg);
@@ -151,6 +151,31 @@ a:hover {
 	padding: var(--pad-1);
 	right: var(--pad-1);
 	bottom: var(--pad-1);
+}
+
+#staff-list {
+	display: flex;
+	gap: 1em;
+}
+
+.staff-member {
+	border: 2px solid var(--col-mute);
+	border-radius: 1em;
+}
+
+.profile {
+	display: grid;
+	gap: 0.5em;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+}
+
+.profile h3 {
+	margin: 0;
+}
+
+.contact-via {
+	padding: 0.5em;
 }
 
 #change-language {
