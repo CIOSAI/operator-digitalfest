@@ -31,12 +31,13 @@ function initialize() {
 			if (!title || !content) {
 				throw new Error(`no content in ${logId}.json?`);
 			}
+			loadingHint.style.display = "none";
 			let titleElement = document.createElement("h1");
 			titleElement.innerText = title;
 			loadingSucceeded.appendChild(titleElement);
-			let contentFragment = document.createDocumentFragment();
-			contentFragment.innerHTML = content;
-			loadingSucceeded.appendChild(contentFragment);
+			let contentDiv = document.createElement("div");
+			contentDiv.innerHTML = content;
+			loadingSucceeded.appendChild(contentDiv);
 		})
 		.catch((fail)=>{});
 }
