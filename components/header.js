@@ -49,18 +49,18 @@ class Header extends HTMLElement {
     gap.style.width = "1em";
     main.appendChild(gap);
 
-    for (let i=0; i<list.length; i++) {
+    for (let i=0; i<Header.list.length; i++) {
       let a = document.createElement("a");
-      if (currentPage===list[i]) {
+      if (currentPage===Header.list[i]) {
 	a.classList.append("currentPage");
       }
       else {
-	if (list[i]!=="") {
+	if (Header.list[i]!=="") {
 	  logo.href = `${hrefBegin}${list[i]}${hrefEnd}`;
 	}
 	a.href = `${hrefBegin}${list[i]}${hrefEnd}`;
       }
-      a.innerText = (lang==="zh"?listZH:listEN)[i];
+      a.innerText = (lang==="zh"?Header.listZH:Header.listEN)[i];
       main.appendChild(a);
     }
 
