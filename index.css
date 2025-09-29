@@ -76,7 +76,7 @@ a:hover {
 	pointer-events: none;
 }
 
-#head {
+/*#head {
 	height: var(--size-big);
 	padding: var(--size-mid);
 	display: flex;
@@ -91,7 +91,7 @@ a:hover {
 
 #head .currentPage::before {
 	content: ">";
-}
+}*/
 
 @media screen and (max-width: 1000px) {
 	#head {
