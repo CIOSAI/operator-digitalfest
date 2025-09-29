@@ -1,7 +1,7 @@
 class Header extends HTMLElement {
-  const list = ["", "timetable", "compo-rules", "about", "contact"];
-  const listEN = ["Home", "Timetable", "Categories & Rules", "About", "Contact us"];
-  const listZH = ["主畫面", "活動流程", "徵稿類別及規範", "關於", "聯絡我們"];
+  static list = ["", "timetable", "compo-rules", "about", "contact"];
+  static listEN = ["Home", "Timetable", "Categories & Rules", "About", "Contact us"];
+  static listZH = ["主畫面", "活動流程", "徵稿類別及規範", "關於", "聯絡我們"];
 
   constructor() {
     super();
