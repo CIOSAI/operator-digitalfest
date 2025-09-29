@@ -56,9 +56,9 @@ if (events_list) {
 			})
 			.then((data)=>{
 				let card = document.createElement("event-card");
-				card.href = is_en?`${EVENT_DATA_BASE_URL}/en?id=${id}`:`${EVENT_DATA_BASE_URL}?id=${id}`;
-				card.caption = data[is_en?"caption_en":"caption"];
-				card.img = data["thumbnailSource"];
+				card.setAttribute("href", is_en?`${EVENT_DATA_BASE_URL}/en?id=${id}`:`${EVENT_DATA_BASE_URL}?id=${id}`);
+				card.setAttribute("caption", data[is_en?"caption_en":"caption"]);
+				card.setAttribute("img", data["thumbnailSource"]);
 				events_list.appendChild(card);
 			})
 			.catch((fail)=>{});
