@@ -3,7 +3,7 @@ import { Header } from "./components/header.js";
 const DISCORD_INVITE = "https://discord.gg/HSwYqDc8Na"
 
 function initialize() {
-customElements.define("header", Header);
+customElements.define("custom-header", Header);
 
 const wips = document.getElementsByClassName("WIP");
 for (let wip of wips) {
