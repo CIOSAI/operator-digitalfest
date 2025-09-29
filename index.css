@@ -119,6 +119,15 @@ a:hover {
 	overflow-x: scroll;
 }
 
+div#events-list {
+	background: none;
+}
+
+#events-list div {
+	background-color: transparent;
+}
+/*!important*/ 
+
 #events-list event-card {
 	min-width: 12em;
 	min-height: 9em;

@@ -31,16 +31,17 @@ class EventCard extends HTMLElement {
     const bgImg = document.createElement("img");
     bgImg.src = img;
     bgImg.style.position = "absolute";
-    bgImg.style.zIndex = "-1";
     bgImg.style.width = "100%";
     bgImg.style.height = "100%";
     bgImg.style.objectFit = "cover";
     main.appendChild(bgImg);
 
     const textBox = document.createElement("div");
+    textBox.style.position = "relative";
     textBox.style.height = "calc(100% - 2*var(--size-smol))";
     textBox.style.padding = "var(--size-smol)";
     textBox.style.margin = "0";
+    textBox.style.zIndex = "1";
     textBox.style.backgroundImage = "linear-gradient(to bottom, var(--col-bg), transparent)";
     const captionText = document.createElement("p");
     captionText.innerText = caption;
