@@ -52,7 +52,7 @@ class Header extends HTMLElement {
     for (let i=0; i<Header.list.length; i++) {
       let a = document.createElement("a");
       if (currentPage===Header.list[i]) {
-	a.classList.append("currentPage");
+	a.classList.add("currentPage");
       }
       else {
 	if (Header.list[i]!=="") {
