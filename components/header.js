@@ -25,14 +25,11 @@ class Header extends HTMLElement {
       hrefEnd = this.getAttribute("href-end");
     }
 
-    const shadow = this.attachShadow({ mode: "open" });
-
     const styleSheet = document.createElement("style");
     styleSheet.textContent = `.currentPage::before { content:">"; }`;
 
-    const main = document.createElement("div");
-    main.id = "head";
-    main.style.display = "flex";
+    this.id = "head";
+    this.style.display = "flex";
     
     const logoImg = document.createElement("img");
     logoImg.src = `${hrefBegin}asset/icon/logo.svg`;
@@ -43,11 +40,11 @@ class Header extends HTMLElement {
     logo.style.height = "100%";
     logo.style.width = "min-content";
     logo.appendChild(logoImg);
-    main.appendChild(logo);
+    this.appendChild(logo);
 
     const gap = document.createElement("div");
     gap.style.width = "1em";
-    main.appendChild(gap);
+    this.appendChild(gap);
 
     for (let i=0; i<Header.list.length; i++) {
       let a = document.createElement("a");
@@ -61,7 +58,7 @@ class Header extends HTMLElement {
 	a.href = `${hrefBegin}${Header.list[i]}${hrefEnd}`;
       }
       a.innerText = (lang==="zh"?Header.listZH:Header.listEN)[i];
-      main.appendChild(a);
+      this.appendChild(a);
     }
 
     /*
@@ -98,8 +95,7 @@ class Header extends HTMLElement {
 	content: ">";
 }
 		*/
-    shadow.appendChild(styleSheet);
-    shadow.appendChild(main);
+    this.appendChild(styleSheet);
   }
 }
 
