@@ -1,4 +1,4 @@
-import { Header } from "components/header.js";
+import { Header } from "./components/header.js";
 
 const DISCORD_INVITE = "https://discord.gg/HSwYqDc8Na"
 
