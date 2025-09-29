@@ -102,6 +102,37 @@ a:hover {
 	background: color-mix(in srgb, var(--col-bg) var(--opacity-lightmode-textbackground), transparent);
 }
 
+#important-links {
+	display: flex;
+	gap: var(--pad-1);
+}
+
+#important-links a:before{
+	content: " →";
+}
+
+#events-list {
+	display: flex;
+	width: 70vw;
+	padding: 0;
+	gap: 1em;
+	overflow-x: scroll;
+}
+
+#events-list event-card {
+	min-width: 12em;
+	min-height: 9em;
+	border: 2px solid var(--col-main);
+}
+
+event-card p {
+	font-size: var(--size-smol);
+}
+
+#what-is-this {
+	max-width: 780px; 
+}
+
 #about-content {
 	display: flex;
 	margin-top: 15vh;
@@ -117,19 +148,6 @@ a:hover {
 
 .compo-rules {
 	max-width: 1200px;
-}
-
-#important-links {
-	display: flex;
-	gap: var(--pad-1);
-}
-
-#important-links a:before{
-	content: " →";
-}
-
-#what-is-this {
-	max-width: 780px; 
 }
 
 #subject-to-change {
