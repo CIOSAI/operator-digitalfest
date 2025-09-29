@@ -52,49 +52,15 @@ class Header extends HTMLElement {
 	a.classList.add("currentPage");
       }
       else {
-	if (Header.list[i]!=="") {
-	  logo.href = `${hrefBegin}${Header.list[i]}${hrefEnd}`;
-	}
 	a.href = `${hrefBegin}${Header.list[i]}${hrefEnd}`;
       }
       a.innerText = (lang==="zh"?Header.listZH:Header.listEN)[i];
       this.appendChild(a);
     }
+    if (currentPage!=="") {
+      logo.href = `${hrefBegin}${hrefEnd}`;
+    }
 
-    /*
-	<div id="head">
-		<a id="logo"><img src="asset/icon/logo.svg"></a>
-		<div style="width: 1em;"></div>
-		<a class="currentPage">主畫面</a>
-		<a href="./timetable">活動流程</a>
-		<a href="./compo-rules">徵稿類別及規範</a>
-		<a href="./about">關於</a>
-		<a href="./contact">聯絡我們</a>
-	</div>
-		<a id="logo"><img src="../asset/icon/logo.svg"></a>
-		<div style="width: 1em;"></div>
-		<a class="currentPage">Home</a>
-		<a href="../timetable/en">Timetable</a>
-		<a href="../compo-rules/en">Categories & Rules</a>
-		<a href="../about/en">About</a>
-		<a href="../contact/en">Contact us</a>
-#head {
-	height: var(--size-big);
-	padding: var(--size-mid);
-	display: flex;
-	column-gap: var(--size-mid);
-	background: color-mix(in srgb, var(--col-bg) var(--opacity-lightmode-textbackground), transparent);
-}
-
-#logo, #logo svg, #logo img {
-	height: 100%;
-	width: min-content;
-}
-
-#head .currentPage::before {
-	content: ">";
-}
-		*/
     this.appendChild(styleSheet);
   }
 }
