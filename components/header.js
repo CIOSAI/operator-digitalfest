@@ -98,7 +98,7 @@ class Header extends HTMLElement {
 	content: ">";
 }
 		*/
-    shadow.appendChild(style);
+    shadow.appendChild(styleSheet);
     shadow.appendChild(main);
   }
 }
