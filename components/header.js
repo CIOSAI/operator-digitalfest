@@ -56,9 +56,9 @@ class Header extends HTMLElement {
       }
       else {
 	if (Header.list[i]!=="") {
-	  logo.href = `${hrefBegin}${list[i]}${hrefEnd}`;
+	  logo.href = `${hrefBegin}${Header.list[i]}${hrefEnd}`;
 	}
-	a.href = `${hrefBegin}${list[i]}${hrefEnd}`;
+	a.href = `${hrefBegin}${Header.list[i]}${hrefEnd}`;
       }
       a.innerText = (lang==="zh"?Header.listZH:Header.listEN)[i];
       main.appendChild(a);
