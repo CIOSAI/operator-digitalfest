@@ -76,27 +76,15 @@ a:hover {
 	pointer-events: none;
 }
 
-/*#head {
+#head {
 	height: var(--size-big);
 	padding: var(--size-mid);
-	display: flex;
 	column-gap: var(--size-mid);
 	background: color-mix(in srgb, var(--col-bg) var(--opacity-lightmode-textbackground), transparent);
 }
 
-#logo, #logo svg, #logo img {
-	height: 100%;
-	width: min-content;
-}
-
-#head .currentPage::before {
-	content: ">";
-}*/
-
 @media screen and (max-width: 1000px) {
 	#head {
-		background: red;
-		display: flex;
 		flex-direction: column;
 	}
 }
