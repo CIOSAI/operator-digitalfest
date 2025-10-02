@@ -33,9 +33,11 @@ function initialize() {
 			}
 			loadingHint.style.display = "none";
 			let titleElement = document.createElement("h1");
+			titleElement.id = "log-title";
 			titleElement.innerText = title;
 			loadingSucceeded.appendChild(titleElement);
 			let contentDiv = document.createElement("div");
+			contentDiv.id = "log-content";
 			contentDiv.innerHTML = content;
 			loadingSucceeded.appendChild(contentDiv);
 		})

@@ -126,7 +126,6 @@ div#events-list {
 #events-list div {
 	background-color: transparent;
 }
-/*!important*/ 
 
 #events-list event-card {
 	min-width: 12em;
@@ -193,6 +192,10 @@ event-card p {
 
 .contact-via {
 	padding: 0.5em;
+}
+
+#log-title {
+	padding: 0 2em;
 }
 
 #change-language {
