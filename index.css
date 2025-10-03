@@ -160,6 +160,7 @@ event-card p {
 
 #subject-to-change {
 	position: sticky;
+	z-index: 10;
 	background: var(--col-bg);
 	border: 2px solid var(--col-main);
 	padding: var(--pad-1);
