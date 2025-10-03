@@ -198,6 +198,10 @@ event-card p {
 	padding: 0 2em;
 }
 
+#log-content img {
+	max-width: 100vw;
+}
+
 #change-language {
 	position: absolute;
 	right: 1em;
