@@ -38,6 +38,9 @@ else if (at_page.match("about")) {
 else if (at_page.match("contact")) {
 	change_language.href = "https://ciosai.github.io/operator-digitalfest/contact" + (is_en?"":"/en");
 }
+else if (at_page.match("submit")) {
+	change_language.href = "https://ciosai.github.io/operator-digitalfest/submit" + (is_en?"":"/en");
+}
 else {
 	change_language.href = "https://ciosai.github.io/operator-digitalfest" + (is_en?"":"/en");
 }
