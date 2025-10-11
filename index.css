@@ -158,6 +158,23 @@ event-card p {
 	max-width: 1200px;
 }
 
+#timetable td {
+	padding: 0 1em;
+}
+
+#timetable td:nth-child(5) {
+	display: none;
+}
+
+@media screen and (max-width: 430px) {
+	#timetable td {
+		padding: 0 var(--pad-1);
+	}
+	#timetable td:nth-child(2), #timetable td:nth-child(4) {
+		display: none;
+	}
+}
+
 #staff-list {
 	display: flex;
 	flex-wrap: wrap;
