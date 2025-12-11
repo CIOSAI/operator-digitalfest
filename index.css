@@ -175,7 +175,7 @@ event-card p {
 	}
 }
 
-#steps .step img {
+#steps img {
 	object-fit: contain;
 	width: calc(100vw - 6rem);
 	max-height: min(80svh, 48rem);
