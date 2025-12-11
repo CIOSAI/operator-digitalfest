@@ -175,6 +175,16 @@ event-card p {
 	}
 }
 
+.step img {
+	object-fit: contain;
+	width: calc(100vw - 6rem);
+	max-height: calc(100svh - 12rem);
+}
+.transport-type {
+	display: flex;
+	align-items: center;
+}
+
 #staff-list {
 	display: flex;
 	flex-wrap: wrap;
