@@ -175,10 +175,10 @@ event-card p {
 	}
 }
 
-.step img {
+#steps .step img {
 	object-fit: contain;
 	width: calc(100vw - 6rem);
-	max-height: calc(100svh - 12rem);
+	max-height: min(80svh, 48rem);
 }
 .transport-type {
 	display: flex;
