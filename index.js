@@ -53,9 +53,11 @@ if (events_list) {
 	let event_load_throttling = false;
 
 	events_list.addEventListener('wheel', (e)=>{
-		if (e.deltaY===0) { return; }
-		e.preventDefault(); // avoid continuing to scroll vertically
-		events_list.scrollLeft += e.deltaY;
+		if (window.innerWidth>800) {
+			if (e.deltaY===0) { return; }
+			e.preventDefault(); // avoid continuing to scroll vertically
+			events_list.scrollLeft += e.deltaY;
+		}
 
 		if (event_load_throttling) { return; }
 		if (event_lazy_load.length>0) {

@@ -30,6 +30,10 @@ html, body {
 	html, body {
 		font-size: var(--size-smol);
 	}
+	#events-list {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 
 html {
@@ -128,8 +132,7 @@ div#events-list {
 }
 
 #events-list event-card {
-	width: 16em;
-	min-width: 16em;
+	min-width: min(100%, 16em);
 	height: 9em;
 	border: 2px solid var(--col-main);
 }
