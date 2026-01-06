@@ -128,8 +128,8 @@ div#events-list {
 }
 
 #events-list event-card {
-	min-width: 12em;
-	min-height: 9em;
+	width: 16em;
+	height: 9em;
 	border: 2px solid var(--col-main);
 }
 
