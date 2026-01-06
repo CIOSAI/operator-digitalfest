@@ -129,6 +129,7 @@ div#events-list {
 
 #events-list event-card {
 	width: 16em;
+	min-width: 16em;
 	height: 9em;
 	border: 2px solid var(--col-main);
 }

@@ -48,6 +48,25 @@ document.body.appendChild(change_language);
 
 const events_list = document.getElementById("events-list");
 if (events_list) {
+	const EVENT_LAZY_LOAD_THROTTLE_MS = 200;
+	let event_lazy_load = [];
+	let event_load_throttling = false;
+
+	events_list.addEventListener('wheel', (e)=>{
+		if (e.deltaY===0) { return; }
+		e.preventDefault(); // avoid continuing to scroll vertically
+		events_list.scrollLeft += e.deltaY;
+
+		if (event_load_throttling) { return; }
+		if (event_lazy_load.length>0) {
+			attemptCreateCard(event_lazy_load.pop());
+		}
+		event_load_throttling = true;
+		setTimeout(()=>{
+			event_load_throttling = false;
+		}, EVENT_LAZY_LOAD_THROTTLE_MS);
+	}, {passive: false});
+
 	function attemptCreateCard(id) {
 		if (!/^[0-9]{8}$/.test(id)) { return; }
 		fetch(`${EVENT_DATA_BASE_URL}${id}.json`)
@@ -59,10 +78,26 @@ if (events_list) {
 			})
 			.then((data)=>{
 				let card = document.createElement("event-card");
+				card.dataset['id'] = id;
 				card.setAttribute("href", is_en?`${EVENT_DATA_BASE_URL}/en?id=${id}`:`${EVENT_DATA_BASE_URL}?id=${id}`);
 				card.setAttribute("caption", data[is_en?"caption_en":"caption"]);
 				card.setAttribute("img", data["thumbnailSource"]);
-				events_list.appendChild(card);
+				let existingCards = events_list.children;
+				if (existingCards.length===0) {
+					events_list.appendChild(card);
+				}
+				else {
+					let before = null;
+					for (let child of existingCards) {
+						if (!child.dataset) { continue; }
+						if (!Object.hasOwn(child.dataset, 'id')) { continue; }
+						if (parseInt(id)>parseInt(child.dataset['id'])) {
+							before = child;
+							break;
+						}
+					}
+					events_list.insertBefore(card, before);
+				}
 			})
 			.catch((fail)=>{});
 	}
@@ -85,6 +120,7 @@ if (events_list) {
 				// there aren't even that many yet
 				attemptCreateCard(entries[i]);
 			}
+			event_lazy_load = entries.slice(3);
 		})
 		.catch((fail)=>{
 			let allEvents = document.getElementById("all-events");
