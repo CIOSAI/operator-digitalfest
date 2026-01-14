@@ -5,6 +5,15 @@ const DISCORD_INVITE = "https://discord.gg/HSwYqDc8Na";
 const EVENT_LIST_PRELOAD = 3;
 const EVENT_LIST = "https://ciosai.github.io/operator-digitalfest/log/meta.json";
 const EVENT_DATA_BASE_URL = "https://ciosai.github.io/operator-digitalfest/log/";
+const VALIDITY_SINCE_FOREVER = new Date("0001-01-01T01:01:01.001+08:00");
+const VALIDITY_UNTIL_FOREVER = new Date("9999-12-31T23:59:59.999+08:00");
+const LINK_VALIDITY = {
+	"register": {start: VALIDITY_SINCE_FOREVER, end: new Date("2026-01-16T23:59:59.999+08:00")},
+	"submit": {start: VALIDITY_SINCE_FOREVER, end: new Date("2026-01-16T23:59:59.999+08:00")},
+	"mailinglist": {start: VALIDITY_SINCE_FOREVER, end: new Date("2026-01-16T23:59:59.999+08:00")},
+	"stream": {start: new Date("2026-01-17T09:00:00.000+08:00"), end: new Date("2026-01-17T19:00:00.000+08:00")},
+	"demozoo": {start: VALIDITY_UNTIL_FOREVER, end: VALIDITY_UNTIL_FOREVER},
+};
 
 function initialize() {
 customElements.define("custom-header", Header);
@@ -45,6 +54,17 @@ else {
 	change_language.href = "https://ciosai.github.io/operator-digitalfest" + (is_en?"":"/en");
 }
 document.body.appendChild(change_language);
+
+for (let [link_id, time_range] of Object.entries(LINK_VALIDITY)) {
+	const the_link = document.getElementById("link-"+link_id);
+	if (!the_link) {continue;}
+	const now = use_inputtime?inputtime.getTime():Date.now();
+	if (time_range.start.getTime()<now &&
+	    now<time_range.end.getTime()) {
+		continue;
+	}
+	the_link.parentNode.removeChild(the_link);
+}
 
 const events_list = document.getElementById("events-list");
 if (events_list) {
