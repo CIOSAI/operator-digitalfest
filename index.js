@@ -58,7 +58,7 @@ document.body.appendChild(change_language);
 for (let [link_id, time_range] of Object.entries(LINK_VALIDITY)) {
 	const the_link = document.getElementById("link-"+link_id);
 	if (!the_link) {continue;}
-	const now = use_inputtime?inputtime.getTime():Date.now();
+	const now = Date.now();
 	if (time_range.start.getTime()<now &&
 	    now<time_range.end.getTime()) {
 		continue;
