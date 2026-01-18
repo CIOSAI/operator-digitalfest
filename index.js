@@ -1,7 +1,7 @@
 import { Header } from "./components/header.js";
 import { EventCard } from "./components/eventCard.js";
 
-const DISCORD_INVITE = "https://discord.gg/HSwYqDc8Na";
+const DISCORD_INVITE = "https://discord.gg/44J7Sgk2FB";
 const EVENT_LIST_PRELOAD = 3;
 const EVENT_LIST = "https://ciosai.github.io/operator-digitalfest/log/meta.json";
 const EVENT_DATA_BASE_URL = "https://ciosai.github.io/operator-digitalfest/log/";
