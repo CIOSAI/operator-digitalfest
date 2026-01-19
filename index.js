@@ -12,7 +12,9 @@ const LINK_VALIDITY = {
 	"submit": {start: VALIDITY_SINCE_FOREVER, end: new Date("2026-01-16T23:59:59.999+08:00")},
 	"mailinglist": {start: VALIDITY_SINCE_FOREVER, end: new Date("2026-01-16T23:59:59.999+08:00")},
 	"stream": {start: new Date("2026-01-17T09:00:00.000+08:00"), end: new Date("2026-01-17T19:00:00.000+08:00")},
-	"demozoo": {start: VALIDITY_UNTIL_FOREVER, end: VALIDITY_UNTIL_FOREVER},
+	"demozoo": {start: new Date("2026-01-17T23:59:59.999+08:00"), end: VALIDITY_UNTIL_FOREVER},
+	"sceneorg": {start: new Date("2026-01-17T23:59:59.999+08:00"), end: VALIDITY_UNTIL_FOREVER},
+	"source": {start: new Date("2026-01-17T23:59:59.999+08:00"), end: VALIDITY_UNTIL_FOREVER},
 };
 
 function initialize() {
