@@ -259,7 +259,7 @@ event-card p {
 
 @media (prefers-color-scheme: dark) {
 	#background-video {
-		filter: brightness(0.45);
+		filter: brightness(0.35);
 	}
 
 	#head, #content div {
