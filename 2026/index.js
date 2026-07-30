@@ -8,13 +8,13 @@ const EVENT_DATA_BASE_URL = "https://ciosai.github.io/operator-digitalfest/log/"
 const VALIDITY_SINCE_FOREVER = new Date("0001-01-01T01:01:01.001+08:00");
 const VALIDITY_UNTIL_FOREVER = new Date("9999-12-31T23:59:59.999+08:00");
 const LINK_VALIDITY = {
-	"register": {start: VALIDITY_UNTIL_FOREVER, end: VALIDITY_SINCE_FOREVER},
-	"submit": {start: VALIDITY_UNTIL_FOREVER, end: VALIDITY_SINCE_FOREVER},
-	"mailinglist": {start: VALIDITY_UNTIL_FOREVER, end: VALIDITY_SINCE_FOREVER},
-	"stream": {start: VALIDITY_UNTIL_FOREVER, end: VALIDITY_SINCE_FOREVER},
-	"demozoo": {start: VALIDITY_SINCE_FOREVER, end: VALIDITY_UNTIL_FOREVER},
-	"sceneorg": {start: VALIDITY_SINCE_FOREVER, end: VALIDITY_UNTIL_FOREVER},
-	"source": {start: VALIDITY_UNTIL_FOREVER, end: VALIDITY_SINCE_FOREVER},
+	"register": {start: VALIDITY_SINCE_FOREVER, end: new Date("2026-01-16T23:59:59.999+08:00")},
+	"submit": {start: VALIDITY_SINCE_FOREVER, end: new Date("2026-01-16T23:59:59.999+08:00")},
+	"mailinglist": {start: VALIDITY_SINCE_FOREVER, end: new Date("2026-01-16T23:59:59.999+08:00")},
+	"stream": {start: new Date("2026-01-17T09:00:00.000+08:00"), end: new Date("2026-01-17T19:00:00.000+08:00")},
+	"demozoo": {start: new Date("2026-01-17T23:59:59.999+08:00"), end: VALIDITY_UNTIL_FOREVER},
+	"sceneorg": {start: new Date("2026-01-17T23:59:59.999+08:00"), end: VALIDITY_UNTIL_FOREVER},
+	"source": {start: new Date("2026-01-17T23:59:59.999+08:00"), end: VALIDITY_UNTIL_FOREVER},
 };
 
 function initialize() {
@@ -38,22 +38,22 @@ change_language.id = "change-language";
 const at_page = window.location.href.match(/(operator-digitalfest|localhost:[0-9]{4})(\/?.*)(\?.+=.+)?/)[2];
 const is_en = /\/en/g.test(at_page);
 if (at_page.match("timetable")) {
-	change_language.href = "https://ciosai.github.io/operator-digitalfest/timetable" + (is_en?"":"/en");
+	change_language.href = "https://ciosai.github.io/operator-digitalfest/2026/timetable" + (is_en?"":"/en");
 }
 else if (at_page.match("compo-rules")) {
-	change_language.href = "https://ciosai.github.io/operator-digitalfest/compo-rules" + (is_en?"":"/en");
+	change_language.href = "https://ciosai.github.io/operator-digitalfest/2026/compo-rules" + (is_en?"":"/en");
 }
 else if (at_page.match("about")) {
-	change_language.href = "https://ciosai.github.io/operator-digitalfest/about" + (is_en?"":"/en");
+	change_language.href = "https://ciosai.github.io/operator-digitalfest/2026/about" + (is_en?"":"/en");
 }
 else if (at_page.match("contact")) {
-	change_language.href = "https://ciosai.github.io/operator-digitalfest/contact" + (is_en?"":"/en");
+	change_language.href = "https://ciosai.github.io/operator-digitalfest/2026/contact" + (is_en?"":"/en");
 }
 else if (at_page.match("submit")) {
-	change_language.href = "https://ciosai.github.io/operator-digitalfest/submit" + (is_en?"":"/en");
+	change_language.href = "https://ciosai.github.io/operator-digitalfest/2026/submit" + (is_en?"":"/en");
 }
 else {
-	change_language.href = "https://ciosai.github.io/operator-digitalfest" + (is_en?"":"/en");
+	change_language.href = "https://ciosai.github.io/operator-digitalfest/2026" + (is_en?"":"/en");
 }
 document.body.appendChild(change_language);
 
