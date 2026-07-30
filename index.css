@@ -101,7 +101,7 @@ a:hover {
 	align-items: center;
 }
 
-#content div {
+#content div, #content h1 {
 	padding: var(--pad-1);
 	background: color-mix(in srgb, var(--col-bg) var(--opacity-lightmode-textbackground), transparent);
 }
