@@ -115,6 +115,26 @@ a:hover {
 	content: " →";
 }
 
+#thank-venue img {
+	height: 150px;
+}
+
+#thank-venue img.dark {
+        display: none;
+}
+#thank-venue img.light {
+        display: initial;
+}
+
+@media (prefers-color-scheme: dark) {
+	#thank-venue img.dark {
+		display: initial;
+	}
+	#thank-venue img.light {
+		display: none;
+	}
+}
+
 #events-list {
 	display: flex;
 	width: 70vw;
