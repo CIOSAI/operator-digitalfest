@@ -87,6 +87,10 @@ a:hover {
 	background: color-mix(in srgb, var(--col-bg) var(--opacity-lightmode-textbackground), transparent);
 }
 
+#head a {
+	white-space: nowrap;
+}
+
 @media screen and (max-width: 1000px) {
 	#head {
 		flex-direction: column;
@@ -268,13 +272,6 @@ event-card p {
 	padding: var(--pad-1);
 	right: var(--pad-1);
 	bottom: var(--pad-1);
-}
-
-#change-language {
-	position: absolute;
-	right: 1em;
-	top: 1em;
-	background: var(--col-bg);
 }
 
 @media (prefers-color-scheme: dark) {
