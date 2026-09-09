@@ -10,12 +10,10 @@
 	--pad-1: 0.1in;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
+:root.dark {
 		--col-bg: #122;
 		--col-main: #eef;
 		--col-mute: #aab;
-	}
 }
 
 html, body {
@@ -83,16 +81,18 @@ a:hover {
 #head {
 	height: var(--size-big);
 	padding: var(--size-mid);
-	column-gap: var(--size-mid);
 	background: color-mix(in srgb, var(--col-bg) var(--opacity-lightmode-textbackground), transparent);
 }
+#nav, #settings {
+	column-gap: var(--size-mid);
+}
 
-#head a {
+#head div a {
 	white-space: nowrap;
 }
 
 @media screen and (max-width: 1000px) {
-	#head {
+	#nav, #settings {
 		flex-direction: column;
 	}
 }
@@ -130,13 +130,11 @@ a:hover {
         display: initial;
 }
 
-@media (prefers-color-scheme: dark) {
-	#thank-venue img.dark {
-		display: initial;
-	}
-	#thank-venue img.light {
-		display: none;
-	}
+.dark #thank-venue img.dark {
+	display: initial;
+}
+.dark #thank-venue img.light {
+	display: none;
 }
 
 #events-list {
@@ -274,14 +272,12 @@ event-card p {
 	bottom: var(--pad-1);
 }
 
-@media (prefers-color-scheme: dark) {
-	#background-video {
-		filter: brightness(0.35);
-	}
+.dark #background-video {
+	filter: brightness(0.35);
+}
 
-	#head, #content div {
-		background: transparent;
-	}
+.dark #head, .dark #content div {
+	background: transparent;
 }
 
 .WIP {
