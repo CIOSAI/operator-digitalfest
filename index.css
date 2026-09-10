@@ -79,10 +79,16 @@ a:hover {
 }
 
 #head {
-	height: var(--size-big);
+	min-height: var(--size-big);
 	padding: var(--size-mid);
 	background: color-mix(in srgb, var(--col-bg) var(--opacity-lightmode-textbackground), transparent);
 }
+
+#logo, #logo img {
+        height: var(--size-big);
+        width: min-content;
+}
+
 #nav, #settings {
 	column-gap: var(--size-mid);
 }
@@ -97,17 +103,23 @@ a:hover {
 	}
 }
 
+#wrap-content {
+        display: flex;
+	justify-content: center;
+}
+
 #content {
 	display: flex;
+	width: min-content;
 	margin-top: 15vh;
 	padding-bottom: 5em;
 	flex-direction: column;
 	align-items: center;
+	background: color-mix(in srgb, var(--col-bg) var(--opacity-lightmode-textbackground), transparent);
 }
 
 #content div, #content h1 {
 	padding: var(--pad-1);
-	background: color-mix(in srgb, var(--col-bg) var(--opacity-lightmode-textbackground), transparent);
 }
 
 #important-links {

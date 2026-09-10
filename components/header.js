@@ -95,10 +95,6 @@ class Header extends HTMLElement {
     logoImg.src = `${hrefBegin}asset/icon/logo.svg`;
     const logo = document.createElement("a");
     logo.id = "logo";
-    logoImg.style.height = "100%";
-    logoImg.style.width = "min-content";
-    logo.style.height = "100%";
-    logo.style.width = "min-content";
     logo.appendChild(logoImg);
     nav.appendChild(logo);
 
