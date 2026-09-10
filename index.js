@@ -18,6 +18,9 @@ const LINK_VALIDITY = {
 };
 
 function initialize() {
+const at_page = window.location.href.match(/(operator-digitalfest|localhost:[0-9]{4})(\/?.*)(\?.+=.+)?/)[2];
+const is_en = /\/en/g.test(at_page);
+
 customElements.define("custom-header", Header);
 customElements.define("event-card", EventCard);
 
