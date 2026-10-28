@@ -35,25 +35,23 @@ if (invite_anchor) {
 const change_language = document.createElement("a");
 change_language.appendChild(document.createTextNode("中/Eng"));
 change_language.id = "change-language";
-const at_page = window.location.href.match(/(operator-digitalfest|localhost:[0-9]{4})(\/?.*)(\?.+=.+)?/)[2];
-const is_en = /\/en/g.test(at_page);
-if (at_page.match("timetable")) {
-	change_language.href = "https://ciosai.github.io/operator-digitalfest/2026/timetable" + (is_en?"":"/en");
+
+let lang = "en";
+if (document.getElementById("head") &&
+  document.getElementById("head").getAttribute("lang")==="zh") {
+  lang = "zh";
 }
-else if (at_page.match("compo-rules")) {
-	change_language.href = "https://ciosai.github.io/operator-digitalfest/2026/compo-rules" + (is_en?"":"/en");
-}
-else if (at_page.match("about")) {
-	change_language.href = "https://ciosai.github.io/operator-digitalfest/2026/about" + (is_en?"":"/en");
-}
-else if (at_page.match("contact")) {
-	change_language.href = "https://ciosai.github.io/operator-digitalfest/2026/contact" + (is_en?"":"/en");
-}
-else if (at_page.match("submit")) {
-	change_language.href = "https://ciosai.github.io/operator-digitalfest/2026/submit" + (is_en?"":"/en");
+const href_matcher = window.location.href.match(/(ciosai\.github\.io\/operator-digitalfest|localhost:[0-9]{4}|operatorparty\.cc)(\/2026)(\/?[a-z-]*)?(\?.+=.+)?/);
+const domain = href_matcher[1]+href_matcher[2];
+const protocol = domain.match("localhost")?"http://":"https://";
+const at_page = href_matcher[3];
+const is_en = lang==="en";
+// home page
+if (at_page==="/en") {
+  change_language.href = protocol + domain + (is_en?"":"/en");
 }
 else {
-	change_language.href = "https://ciosai.github.io/operator-digitalfest/2026" + (is_en?"":"/en");
+  change_language.href = protocol + domain + at_page + (is_en?"":"/en");
 }
 document.body.appendChild(change_language);
 
