@@ -1,8 +1,19 @@
+
+# 2027
+
+### 鳴謝 credit
+
+staff FL YANG
+
+digiBlock C & staff for venue
+
+# 2026
+
 [on demozoo](https://demozoo.org/parties/5442/)
 [on scene.org](https://files.scene.org/browse/parties/2026/operatordigitalfest26/)
 [on pouet](https://www.pouet.net/party.php?which=2147&when=2026)
 
-# 鳴謝 credit
+### 鳴謝 credit
 
 staff FL YANG and seangau
 
