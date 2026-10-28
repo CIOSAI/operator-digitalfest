@@ -2,7 +2,10 @@ const loadingHint = document.getElementById("loading-hint");
 const loadingFailed = document.getElementById("loading-failed");
 const loadingSucceeded = document.getElementById("loading-succeeded");
 
-const EVENT_DATA_BASE_URL = "https://ciosai.github.io/operator-digitalfest/log/";
+const href_matcher = window.location.href.match(/(ciosai\.github\.io\/operator-digitalfest|localhost:[0-9]{4}|operatorparty\.cc)(\/?[a-z-]*)(\?.+=.+)?/);
+const domain = href_matcher[1];
+const protocol = domain.match("localhost")?"http://":"https://";
+const EVENT_DATA_BASE_URL = protocol + domain + "/log/";
 
 function markAsFail() {
 	loadingHint.style.display = "none";
@@ -10,8 +13,8 @@ function markAsFail() {
 }
 
 function initialize() {
-	const at_page = window.location.href.match(/(operator-digitalfest|localhost:[0-9]{4}|operatorparty\.cc)(\/?.*)(\?.+=.+)?/)[2];
-	const is_en = /\/en/g.test(at_page);
+	const is_zh = document.documentElement.hasAttribute("lang") &&
+	    document.documentElement.getAttribute("lang")==="zh_TW";
 	const urlParams = new URLSearchParams(window.location.search);
 	const logId = urlParams.get("id");
 
@@ -26,8 +29,8 @@ function initialize() {
 			return response.json();
 		})
 		.then((data)=>{
-			let title = data[is_en?"title_en":"title"];
-			let content = data[is_en?"content_en":"content"];
+			let title = data[is_zh?"title":"title_en"];
+			let content = data[is_zh?"content":"content_en"];
 			if (!title || !content) {
 				throw new Error(`no content in ${logId}.json?`);
 			}

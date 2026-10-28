@@ -3,8 +3,11 @@ import { EventCard } from "./components/eventCard.js";
 
 const DISCORD_INVITE = "https://discord.gg/44J7Sgk2FB";
 const EVENT_LIST_PRELOAD = 3;
-const EVENT_LIST = "https://ciosai.github.io/operator-digitalfest/log/meta.json";
-const EVENT_DATA_BASE_URL = "https://ciosai.github.io/operator-digitalfest/log/";
+const href_matcher = window.location.href.match(/(ciosai\.github\.io\/operator-digitalfest|localhost:[0-9]{4}|operatorparty\.cc)(\/?[a-z-]*)(\?.+=.+)?/);
+const domain = href_matcher[1];
+const protocol = domain.match("localhost")?"http://":"https://";
+const EVENT_LIST = protocol + domain + "/log/meta.json";
+const EVENT_DATA_BASE_URL = protocol + domain + "/log/";
 const VALIDITY_SINCE_FOREVER = new Date("0001-01-01T01:01:01.001+08:00");
 const VALIDITY_UNTIL_FOREVER = new Date("9999-12-31T23:59:59.999+08:00");
 const LINK_VALIDITY = {

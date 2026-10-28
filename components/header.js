@@ -51,6 +51,10 @@ class Header extends HTMLElement {
     }
     else {
       change_language.href = protocol + domain + at_page + (is_en?"":"/en");
+      if (at_page==="/log") {
+	change_language.href += "/?";
+	change_language.href += new URLSearchParams(window.location.search).toString();
+      }
     }
     return change_language;
   }
